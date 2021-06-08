@@ -1,0 +1,32 @@
+format = """
+$directory\
+$line_break\
+$username\
+$hostname\
+$line_break\
+$git_branch\
+$git_status\
+$docker_context\
+$package\
+$nodejs\
+$php\
+$custom\
+$cmd_duration\
+$line_break\
+$jobs\
+$time\
+$status\
+$shell\
+$character"""
+
+[username]
+disabled = false
+format = "[$user]($style) "
+show_always = true
+style_root = "black bold"
+style_user = "yellow bold"
+
+[hostname]
+disabled = false
+format = "at [$hostname](bold blue)"
+ssh_only = false
