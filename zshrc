@@ -2,6 +2,7 @@
 ZSH_DISABLE_COMPFIX=true
 export ZSH=$HOME/.oh-my-zsh
 plugins=(
+    autoupdate
     docker
     docker-compose
     gem

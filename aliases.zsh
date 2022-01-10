@@ -18,3 +18,6 @@ alias youtube-dl-mp3="youtube-dl -i --extract-audio --audio-format mp3 --audio-q
 
 # yubikey
 alias gpg-reload-yubikey='gpg-connect-agent "scd serialno" "learn --force" /bye'
+
+# brew update
+alias brew-update='brew update && brew upgrade && brew upgrade --cask --greedy'
