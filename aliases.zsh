@@ -13,8 +13,18 @@ function denv() {
   docker exec "${1}" env
 }
 
+# git shortcuts
+function git-feature() {
+  if [ `git branch --list master` ]
+  then
+    git checkout -b "${1}" master
+  else
+    git checkout -b "${1}" main
+  fi
+}
+
 # youtube-dl
-alias youtube-dl-mp3="youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0"
+alias youtube-dl-mp3="yt-dlp -i --extract-audio --audio-format mp3 --audio-quality 0"
 
 # yubikey
 alias gpg-reload-yubikey='gpg-connect-agent "scd serialno" "learn --force" /bye'
