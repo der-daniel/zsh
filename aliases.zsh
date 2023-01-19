@@ -31,3 +31,7 @@ alias gpg-reload-yubikey='gpg-connect-agent "scd serialno" "learn --force" /bye'
 
 # brew update
 alias brew-update='brew update && brew upgrade && brew upgrade --cask --greedy'
+
+# remove stuff
+alias remove-node-modules='find . -type d -name node_modules -exec trash {} \;'
+alias remove-dist-dirs='find . -type d -name dist -exec trash {} \;'
