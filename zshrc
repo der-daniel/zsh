@@ -33,3 +33,7 @@ export EDITOR='vim'
 # gpgconf --launch gpg-agent
 # gpg-connect-agent updatestartuptty /bye > /dev/null
 # export PASSWORD_STORE_GPG_OPTS='--no-throw-keyids'
+
+# do not share hsitory between tabs
+unsetopt inc_append_history
+unsetopt share_history
