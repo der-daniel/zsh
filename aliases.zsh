@@ -35,3 +35,6 @@ alias brew-update='brew update && brew upgrade && brew upgrade --cask --greedy'
 # remove stuff
 alias remove-node-modules='find . -type d -name node_modules -exec trash {} \;'
 alias remove-dist-dirs='find . -type d -name dist -exec trash {} \;'
+alias remove-turbo-dirs='find . -type d -name .turbo -exec trash {} \;'
+alias remove-next-dirs='find . -type d -name .next -exec trash {} \;'
+alias clean-project='remove-node-modules && remove-dist-dirs && remove-turbo-dirs && remove-next-dirs'

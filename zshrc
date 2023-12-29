@@ -37,3 +37,5 @@ export EDITOR='vim'
 # do not share hsitory between tabs
 unsetopt inc_append_history
 unsetopt share_history
+
+source /Users/daniel/.docker/init-zsh.sh || true # Added by Docker Desktop
