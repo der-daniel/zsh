@@ -23,6 +23,11 @@ function git-feature() {
   fi
 }
 
+# scale down slideshow
+function scale-down-slideshow() {
+  magick -density 200x200 -quality 100 -compress jpeg "${1}" "${2}"
+}
+
 # youtube-dl
 alias youtube-dl-mp3="yt-dlp -i --extract-audio --audio-format mp3 --audio-quality 0"
 
@@ -38,3 +43,8 @@ alias remove-dist-dirs='find . -type d -name dist -exec trash {} \;'
 alias remove-turbo-dirs='find . -type d -name .turbo -exec trash {} \;'
 alias remove-next-dirs='find . -type d -name .next -exec trash {} \;'
 alias clean-project='remove-node-modules && remove-dist-dirs && remove-turbo-dirs && remove-next-dirs'
+
+# magick
+function toWebp() {
+  magick "${1}" "${1%%.*}.webp"
+}
