@@ -9,17 +9,20 @@ plugins=(
     git
     node
     npm
-    pass
     pip
     sudo
-    tmux
     wd
-    yarn
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
 )
 source $ZSH/oh-my-zsh.sh
+
+# add homebrew to PATH
+path+=(/opt/homebrew/bin)
+path+=(~/.npm/bin)
+export PATH
+HOMEBREW_CASK_OPTS=--no-quarantine
 
 # starship
 eval "$(starship init zsh)"
@@ -27,15 +30,6 @@ eval "$(starship init zsh)"
 # editor
 export EDITOR='vim'
 
-# gpg
-# export GPG_TTY="$(tty)"
-# export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-# gpgconf --launch gpg-agent
-# gpg-connect-agent updatestartuptty /bye > /dev/null
-# export PASSWORD_STORE_GPG_OPTS='--no-throw-keyids'
-
 # do not share hsitory between tabs
 unsetopt inc_append_history
 unsetopt share_history
-
-source /Users/daniel/.docker/init-zsh.sh || true # Added by Docker Desktop
