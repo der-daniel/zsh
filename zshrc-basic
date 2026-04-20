@@ -1,0 +1,5 @@
+# add homebrew to PATH
+path+=(/opt/homebrew/bin)
+path+=(~/.npm/bin)
+export PATH
+HOMEBREW_CASK_OPTS=--no-quarantine
